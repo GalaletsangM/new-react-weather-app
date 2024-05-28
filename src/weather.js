@@ -9,10 +9,8 @@ export default function Weather() {
   //let [loaded, setLoaded] = useState(true);
   const [weather, setWeather] = useState({});
   const [heading, setHeading] = useState(`${city}`);
-  const [date, setDate] = useState("Wednesday, 21:48");
 
   function displayWeather(response) {
-    console.log(response.data.main);
     setWeather({
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -54,7 +52,7 @@ export default function Weather() {
                 <h1 className="heading">{heading}</h1>
                 <ul className="list">
                   <li>
-                    <span>Wednesday, 21:48 </span>
+                    <span>Wednesday, 21: </span>
                     <span>{weather.description}</span>
                   </li>
                   <li>
@@ -85,7 +83,11 @@ export default function Weather() {
             {" "}
             open sources on Github{" "}
           </a>
-          and <a href=""></a>
+          and hosted on
+          <a href="https://master--gpmafoko-react-weather-app.netlify.app/">
+            {" "}
+            Netlify
+          </a>
         </footer>
       </div>
     </div>
